@@ -23,7 +23,7 @@ try {
     console.log("Cols:", cols);
 
     for (let col of cols) {
-      const result = connection.query(`Select ${col} from ${table}`);
+      const result = connection.query(`SELECT ${col} FROM ${table}`);
       for(let writeLine of result) {
         fs.appendFileSync("./output", writeLine[col]+'\n');
       }
